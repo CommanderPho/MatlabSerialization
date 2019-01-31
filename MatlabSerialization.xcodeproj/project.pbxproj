@@ -12,6 +12,8 @@
 		AAA3047F20F10DCC00226319 /* MatlabSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA3047120F10DCC00226319 /* MatlabSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AAA3048920F10E0D00226319 /* MatlabSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA3048820F10E0C00226319 /* MatlabSerialization.swift */; };
 		AAA3048A20F1104400226319 /* MatlabSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA3048820F10E0C00226319 /* MatlabSerialization.swift */; };
+		D7B815952202AD43006C4D24 /* MatlabSerialization_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = D7B815932202AD43006C4D24 /* MatlabSerialization_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D7B815992202AD8A006C4D24 /* MatlabSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA3048820F10E0C00226319 /* MatlabSerialization.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +34,9 @@
 		AAA3047C20F10DCC00226319 /* MatlabSerializationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatlabSerializationTests.swift; sourceTree = "<group>"; };
 		AAA3047E20F10DCC00226319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAA3048820F10E0C00226319 /* MatlabSerialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatlabSerialization.swift; sourceTree = "<group>"; };
+		D7B815912202AD43006C4D24 /* MatlabSerialization_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MatlabSerialization_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7B815932202AD43006C4D24 /* MatlabSerialization_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MatlabSerialization_macOS.h; sourceTree = "<group>"; };
+		D7B815942202AD43006C4D24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +55,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D7B8158E2202AD43006C4D24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -58,6 +70,7 @@
 			children = (
 				AAA3047020F10DCC00226319 /* MatlabSerialization */,
 				AAA3047B20F10DCC00226319 /* MatlabSerializationTests */,
+				D7B815922202AD43006C4D24 /* MatlabSerialization-macOS */,
 				AAA3046F20F10DCC00226319 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,6 +80,7 @@
 			children = (
 				AAA3046E20F10DCC00226319 /* MatlabSerialization.framework */,
 				AAA3047720F10DCC00226319 /* MatlabSerializationTests.xctest */,
+				D7B815912202AD43006C4D24 /* MatlabSerialization_macOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,6 +104,15 @@
 			path = MatlabSerializationTests;
 			sourceTree = "<group>";
 		};
+		D7B815922202AD43006C4D24 /* MatlabSerialization-macOS */ = {
+			isa = PBXGroup;
+			children = (
+				D7B815932202AD43006C4D24 /* MatlabSerialization_macOS.h */,
+				D7B815942202AD43006C4D24 /* Info.plist */,
+			);
+			path = "MatlabSerialization-macOS";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -98,6 +121,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAA3047F20F10DCC00226319 /* MatlabSerialization.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7B8158C2202AD43006C4D24 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7B815952202AD43006C4D24 /* MatlabSerialization_macOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +171,24 @@
 			productReference = AAA3047720F10DCC00226319 /* MatlabSerializationTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		D7B815902202AD43006C4D24 /* MatlabSerialization-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7B815982202AD43006C4D24 /* Build configuration list for PBXNativeTarget "MatlabSerialization-macOS" */;
+			buildPhases = (
+				D7B8158C2202AD43006C4D24 /* Headers */,
+				D7B8158D2202AD43006C4D24 /* Sources */,
+				D7B8158E2202AD43006C4D24 /* Frameworks */,
+				D7B8158F2202AD43006C4D24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MatlabSerialization-macOS";
+			productName = "MatlabSerialization-macOS";
+			productReference = D7B815912202AD43006C4D24 /* MatlabSerialization_macOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -157,6 +206,9 @@
 					AAA3047620F10DCC00226319 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
+					D7B815902202AD43006C4D24 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 				};
 			};
 			buildConfigurationList = AAA3046820F10DCC00226319 /* Build configuration list for PBXProject "MatlabSerialization" */;
@@ -173,6 +225,7 @@
 			targets = (
 				AAA3046D20F10DCC00226319 /* MatlabSerialization */,
 				AAA3047620F10DCC00226319 /* MatlabSerializationTests */,
+				D7B815902202AD43006C4D24 /* MatlabSerialization-macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -186,6 +239,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		AAA3047520F10DCC00226319 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7B8158F2202AD43006C4D24 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -209,6 +269,14 @@
 			files = (
 				AAA3047D20F10DCC00226319 /* MatlabSerializationTests.swift in Sources */,
 				AAA3048A20F1104400226319 /* MatlabSerialization.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7B8158D2202AD43006C4D24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7B815992202AD8A006C4D24 /* MatlabSerialization.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +502,65 @@
 			};
 			name = Release;
 		};
+		D7B815962202AD43006C4D24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = GQLSSCX5D8;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "MatlabSerialization-macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ios.MatlabSerialization.MatlabSerialization-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		D7B815972202AD43006C4D24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = GQLSSCX5D8;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "MatlabSerialization-macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ios.MatlabSerialization.MatlabSerialization-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -460,6 +587,15 @@
 			buildConfigurations = (
 				AAA3048620F10DCC00226319 /* Debug */,
 				AAA3048720F10DCC00226319 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7B815982202AD43006C4D24 /* Build configuration list for PBXNativeTarget "MatlabSerialization-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7B815962202AD43006C4D24 /* Debug */,
+				D7B815972202AD43006C4D24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

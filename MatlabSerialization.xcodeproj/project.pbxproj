@@ -12,6 +12,12 @@
 		AAA3047F20F10DCC00226319 /* MatlabSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA3047120F10DCC00226319 /* MatlabSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AAA3048920F10E0D00226319 /* MatlabSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA3048820F10E0C00226319 /* MatlabSerialization.swift */; };
 		AAA3048A20F1104400226319 /* MatlabSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA3048820F10E0C00226319 /* MatlabSerialization.swift */; };
+		D7AD50012212883000A17DF3 /* MatlabWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD50002212883000A17DF3 /* MatlabWriter.swift */; };
+		D7AD50022212883000A17DF3 /* MatlabWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD50002212883000A17DF3 /* MatlabWriter.swift */; };
+		D7AD50032212883000A17DF3 /* MatlabWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD50002212883000A17DF3 /* MatlabWriter.swift */; };
+		D7AD50052212887300A17DF3 /* MatlabEncodableArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD50042212887300A17DF3 /* MatlabEncodableArray.swift */; };
+		D7AD50062212887300A17DF3 /* MatlabEncodableArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD50042212887300A17DF3 /* MatlabEncodableArray.swift */; };
+		D7AD50072212887300A17DF3 /* MatlabEncodableArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD50042212887300A17DF3 /* MatlabEncodableArray.swift */; };
 		D7B815952202AD43006C4D24 /* MatlabSerialization_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = D7B815932202AD43006C4D24 /* MatlabSerialization_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D7B815992202AD8A006C4D24 /* MatlabSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA3048820F10E0C00226319 /* MatlabSerialization.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +40,8 @@
 		AAA3047C20F10DCC00226319 /* MatlabSerializationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatlabSerializationTests.swift; sourceTree = "<group>"; };
 		AAA3047E20F10DCC00226319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAA3048820F10E0C00226319 /* MatlabSerialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatlabSerialization.swift; sourceTree = "<group>"; };
+		D7AD50002212883000A17DF3 /* MatlabWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatlabWriter.swift; sourceTree = "<group>"; };
+		D7AD50042212887300A17DF3 /* MatlabEncodableArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatlabEncodableArray.swift; sourceTree = "<group>"; };
 		D7B815912202AD43006C4D24 /* MatlabSerialization_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MatlabSerialization_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7B815932202AD43006C4D24 /* MatlabSerialization_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MatlabSerialization_macOS.h; sourceTree = "<group>"; };
 		D7B815942202AD43006C4D24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -68,6 +76,7 @@
 		AAA3046420F10DCC00226319 = {
 			isa = PBXGroup;
 			children = (
+				D7AD4FFF2212880F00A17DF3 /* Common */,
 				AAA3047020F10DCC00226319 /* MatlabSerialization */,
 				AAA3047B20F10DCC00226319 /* MatlabSerializationTests */,
 				D7B815922202AD43006C4D24 /* MatlabSerialization-macOS */,
@@ -88,7 +97,6 @@
 		AAA3047020F10DCC00226319 /* MatlabSerialization */ = {
 			isa = PBXGroup;
 			children = (
-				AAA3048820F10E0C00226319 /* MatlabSerialization.swift */,
 				AAA3047120F10DCC00226319 /* MatlabSerialization.h */,
 				AAA3047220F10DCC00226319 /* Info.plist */,
 			);
@@ -102,6 +110,16 @@
 				AAA3047E20F10DCC00226319 /* Info.plist */,
 			);
 			path = MatlabSerializationTests;
+			sourceTree = "<group>";
+		};
+		D7AD4FFF2212880F00A17DF3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				AAA3048820F10E0C00226319 /* MatlabSerialization.swift */,
+				D7AD50002212883000A17DF3 /* MatlabWriter.swift */,
+				D7AD50042212887300A17DF3 /* MatlabEncodableArray.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		D7B815922202AD43006C4D24 /* MatlabSerialization-macOS */ = {
@@ -260,6 +278,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAA3048920F10E0D00226319 /* MatlabSerialization.swift in Sources */,
+				D7AD50012212883000A17DF3 /* MatlabWriter.swift in Sources */,
+				D7AD50052212887300A17DF3 /* MatlabEncodableArray.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +289,8 @@
 			files = (
 				AAA3047D20F10DCC00226319 /* MatlabSerializationTests.swift in Sources */,
 				AAA3048A20F1104400226319 /* MatlabSerialization.swift in Sources */,
+				D7AD50062212887300A17DF3 /* MatlabEncodableArray.swift in Sources */,
+				D7AD50022212883000A17DF3 /* MatlabWriter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +299,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7B815992202AD8A006C4D24 /* MatlabSerialization.swift in Sources */,
+				D7AD50032212883000A17DF3 /* MatlabWriter.swift in Sources */,
+				D7AD50072212887300A17DF3 /* MatlabEncodableArray.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
